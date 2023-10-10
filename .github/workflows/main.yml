@@ -6,7 +6,7 @@ on:
     branches: ["master"]
 
     jobs:
-      test:
+      com:
         runs-on: macos-latest
         steps:
          - uses: actions/checkout@v3
