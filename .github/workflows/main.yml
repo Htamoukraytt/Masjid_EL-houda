@@ -3,10 +3,11 @@ name:  run masjid el houda
 
 on:
   push:
-    branches: ["master"]
+    branches:
+      - master
 
     jobs:
-      com:
+      test:
         runs-on: macos-latest
         steps:
          - uses: actions/checkout@v3
