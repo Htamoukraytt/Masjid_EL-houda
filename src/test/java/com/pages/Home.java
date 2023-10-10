@@ -59,6 +59,7 @@ public class Home {
 
     // validate title
     public void validateTitle(WebDriver driver, String expTitle) {
+        System.out.println("CI/CD");
         String title = driver.getTitle().trim();
         Assert.assertEquals(title, expTitle);
     }
