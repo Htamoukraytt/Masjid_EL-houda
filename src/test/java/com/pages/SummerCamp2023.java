@@ -18,7 +18,7 @@ public class SummerCamp2023 {
 
 
 
-    // elements
+    // elements // ok
     private @FindBy(xpath = "//a[contains(text(),'Summer')]")
     WebElement SummerCampOption;
 
