@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber-Report</td>
+        <td>1</td>
+      <td>27 Jan 2024, 18:40</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.stepDef.AboutUs_StepDef.userValidatesToContactTheBoardPleaseEmailUsAtBoardMasjidalhudaOrgForContactingTheToContactStuff(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="207866000">0.207</td>
+              <td class="duration" data-value="207866000">0.207</td>
+              <td class="duration" data-value="207866000">0.207</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.AboutUs_StepDef.user_clicks_about_us_feature()</td>
+              <td>1</td>
+              <td class="duration" data-value="1352952000">1.352</td>
+              <td class="duration" data-value="1352952000">1.352</td>
+              <td class="duration" data-value="1352952000">1.352</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.AboutUs_StepDef.user_clicks_social_media_type_and_validates(java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="4457011250">4.457</td>
+              <td class="duration" data-value="4457011250">5.534</td>
+              <td class="duration" data-value="17828045000">17.828</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.AboutUs_StepDef.user_validate_is_present(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="304950000">0.304</td>
+              <td class="duration" data-value="304950000">0.445</td>
+              <td class="duration" data-value="1219800000">1.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.AboutUs_StepDef.user_validates_about_us_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2012121000">2.012</td>
+              <td class="duration" data-value="2012121000">2.012</td>
+              <td class="duration" data-value="2012121000">2.012</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.AboutUs_StepDef.user_validates_stuff_members_are(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="194117000">0.194</td>
+              <td class="duration" data-value="194117000">0.194</td>
+              <td class="duration" data-value="194117000">0.194</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Donate_StepDef.userValidatesEachTypeDonationTypeOfDonationsIsClickableAndValidatesWeAreTheRightPageURL(java.lang.String,java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="7475331400">7.475</td>
+              <td class="duration" data-value="7475331400">10.208</td>
+              <td class="duration" data-value="37376657000">37.376</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Donate_StepDef.user_clicks_donate()</td>
+              <td>5</td>
+              <td class="duration" data-value="1486631000">1.486</td>
+              <td class="duration" data-value="1486631000">1.625</td>
+              <td class="duration" data-value="7433155000">7.433</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.HookClass.setUp()</td>
+              <td>26</td>
+              <td class="duration" data-value="4721867730">4.721</td>
+              <td class="duration" data-value="4721867730">10.007</td>
+              <td class="duration" data-value="122768561000">2:2.768</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.HookClass.tearDown(io.cucumber.java.Scenario)</td>
+              <td>26</td>
+              <td class="duration" data-value="149155423">0.149</td>
+              <td class="duration" data-value="149155423">0.558</td>
+              <td class="duration" data-value="3878041000">3.878</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Main_stepDef.userRegistersInKeepMeInformedFeature()</td>
+              <td>1</td>
+              <td class="duration" data-value="1754427000">1.754</td>
+              <td class="duration" data-value="1754427000">1.754</td>
+              <td class="duration" data-value="1754427000">1.754</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Main_stepDef.userValidatesAllMenuOptionsOPTIONAreDisplayedAndClickable(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="867155400">0.867</td>
+              <td class="duration" data-value="867155400">1.533</td>
+              <td class="duration" data-value="4335777000">4.335</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Main_stepDef.userValidatesThatRegistrationWasDoneSuccessfully(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="771628000">0.771</td>
+              <td class="duration" data-value="771628000">0.771</td>
+              <td class="duration" data-value="771628000">0.771</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Main_stepDef.userValidatesTheWelcomeMessageWelcomeToMasjidAlHuda(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1554207000">1.554</td>
+              <td class="duration" data-value="1554207000">1.554</td>
+              <td class="duration" data-value="1554207000">1.554</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Main_stepDef.user_navigates_to_masjid_el_houda_and_validate(java.lang.String)</td>
+              <td>26</td>
+              <td class="duration" data-value="25858538">0.025</td>
+              <td class="duration" data-value="25858538">0.253</td>
+              <td class="duration" data-value="672322000">0.672</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Main_stepDef.user_validates_salah_info_is_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1346855000">1.346</td>
+              <td class="duration" data-value="1346855000">1.346</td>
+              <td class="duration" data-value="1346855000">1.346</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.MultiMedia_StepDef.userValidatesText(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="67103000">0.067</td>
+              <td class="duration" data-value="67103000">0.067</td>
+              <td class="duration" data-value="67103000">0.067</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.MultiMedia_StepDef.user_clicks_multimedia()</td>
+              <td>1</td>
+              <td class="duration" data-value="1338098000">1.338</td>
+              <td class="duration" data-value="1338098000">1.338</td>
+              <td class="duration" data-value="1338098000">1.338</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.MultiMedia_StepDef.user_validates_url(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2011634000">2.011</td>
+              <td class="duration" data-value="2011634000">2.011</td>
+              <td class="duration" data-value="2011634000">2.011</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Services_StepDef.userClicksOPTIONAndValidatesURL(java.lang.String,java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="5344867125">5.344</td>
+              <td class="duration" data-value="5344867125">6.171</td>
+              <td class="duration" data-value="42758937000">42.758</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.Services_StepDef.user_clicks_services_and_validates_is_in_the_services_page(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="2022053750">2.022</td>
+              <td class="duration" data-value="2022053750">2.560</td>
+              <td class="duration" data-value="16176430000">16.176</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.SummerCamp_StepDef.userValidatesThatCanRegisterForCamp(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="28540000">0.028</td>
+              <td class="duration" data-value="28540000">0.028</td>
+              <td class="duration" data-value="28540000">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.SummerCamp_StepDef.user_clicks_register_now()</td>
+              <td>1</td>
+              <td class="duration" data-value="1115523000">1.115</td>
+              <td class="duration" data-value="1115523000">1.115</td>
+              <td class="duration" data-value="1115523000">1.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepDef.SummerCamp_StepDef.user_clicks_summer_camp_and_validates_the_page_url(int,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3037914000">3.037</td>
+              <td class="duration" data-value="3037914000">3.037</td>
+              <td class="duration" data-value="3037914000">3.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>131</td>
+            <td class="duration">2.070</td>
+            <td class="duration">2:2.768</td>
+            <td class="duration">4:31.240</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

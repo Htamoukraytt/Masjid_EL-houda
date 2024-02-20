@@ -1,5 +1,4 @@
 package utils;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,13 +7,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.io.FileNotFoundException;
 import java.time.Duration;
 
 public class DriverHelper {
 
 
-    // encapsulation
-    // special room ...  private room ( no body to see )
     // nobody can create object from it and manipulate
     private static WebDriver driver ;
 
@@ -25,7 +23,7 @@ public class DriverHelper {
 
 
     // Method
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() throws FileNotFoundException {
         if(driver==null || ((RemoteWebDriver)driver).getSessionId()==null){
            // String browser="chrome"; // **
 

@@ -10,6 +10,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class MultiMedia_StepDef {
 
 
@@ -23,6 +25,9 @@ public class MultiMedia_StepDef {
     AboutUs aboutus=new AboutUs(driver);
 
     MultiMedia multiMedia=new MultiMedia(driver);
+
+    public MultiMedia_StepDef() throws FileNotFoundException {
+    }
 
 
     @When("user clicks Multimedia")

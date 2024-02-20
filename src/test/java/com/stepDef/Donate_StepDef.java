@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class Donate_StepDef {
 
     // driver
@@ -25,7 +27,8 @@ public class Donate_StepDef {
 
     Donate donate=new Donate(driver);
 
-
+    public Donate_StepDef() throws FileNotFoundException {
+    }
 
 
     @When("user clicks donate")

@@ -7,6 +7,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class SummerCamp_StepDef {
 
 
@@ -26,6 +28,8 @@ public class SummerCamp_StepDef {
 
     Donate donate=new Donate(driver);
 
+    public SummerCamp_StepDef() throws FileNotFoundException {
+    }
 
 
     @When("user clicks Summer Camp {int} and validates the page url , {string}")

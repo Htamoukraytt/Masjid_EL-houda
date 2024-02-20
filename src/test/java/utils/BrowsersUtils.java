@@ -24,7 +24,6 @@ public class BrowsersUtils {
 
         Select select = new Select(location);
 
-
         switch (methodName) {
 
             case "text":

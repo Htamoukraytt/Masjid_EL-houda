@@ -13,3 +13,4 @@ Feature: Testing Summer Camp 2023 feature
           And   user clicks register now
 
           Then  user  validates that can register for camp 'CAMP REGISTRATION IS NOW OPEN!'
+

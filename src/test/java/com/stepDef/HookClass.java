@@ -8,12 +8,20 @@ import utils.BrowsersUtils;
 import utils.ConfigReader;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class HookClass {
 
 
     WebDriver driver=DriverHelper.getDriver();
-   @Before
-   public void setUp(){
+
+    public HookClass() throws FileNotFoundException {
+    }
+
+    //    public HookClass() throws FileNotFoundException {
+//    }
+    @Before
+   public void setUp() throws FileNotFoundException {
        driver.get(ConfigReader.readProperty("QA_URL"));
 
    }

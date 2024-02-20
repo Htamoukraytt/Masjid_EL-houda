@@ -10,6 +10,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class AboutUs_StepDef {
 
     // driver
@@ -20,6 +22,9 @@ public class AboutUs_StepDef {
    Services services=new Services(driver);
 
    AboutUs aboutus=new AboutUs(driver);
+
+    public AboutUs_StepDef() throws FileNotFoundException {
+    }
 
     @When("user clicks About Us feature")
     public void user_clicks_about_us_feature() {

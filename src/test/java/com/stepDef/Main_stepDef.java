@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import utils.ConfigReader;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class Main_stepDef {
 
     // driver
@@ -17,6 +19,9 @@ public class Main_stepDef {
 
      //pages
     Home home =new Home(driver);
+
+    public Main_stepDef() throws FileNotFoundException {
+    }
 
     @Given("user navigates to Masjid El Houda and validate {string}")
     public void user_navigates_to_masjid_el_houda_and_validate(String expectedUrl) {
@@ -41,10 +46,11 @@ public class Main_stepDef {
 
 
     @And("user registers in keep me informed feature")
-    public void userRegistersInKeepMeInformedFeature() {
+    public void userRegistersInKeepMeInformedFeature() throws FileNotFoundException {
         home.registerInKeepMeInformed(driver,
                                       ConfigReader.readProperty("email"),
                                       ConfigReader.readProperty("phoneNumber")
+
             );
 
     }

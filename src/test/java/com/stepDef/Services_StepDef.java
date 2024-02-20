@@ -8,6 +8,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import utils.DriverHelper;
 
+import java.io.FileNotFoundException;
+
 public class Services_StepDef {
 
     // driver
@@ -17,7 +19,8 @@ public class Services_StepDef {
     Home home =new Home(driver);
    Services services=new Services(driver);
 
-
+    public Services_StepDef() throws FileNotFoundException {
+    }
 
 
     @When("user clicks Services and validates is in the services page , {string}")
